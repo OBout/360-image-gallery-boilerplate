@@ -40,10 +40,25 @@
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+      <a-entity id="container" position="0 -1 -4"
+        geometry="primitive: plane; height: 2; width: 5"
+        material="color: #444444">
+        <a-entity id="left" position="-2 -0.6 0.2" 
+                  geometry="primitive: plane; height: 0.3; width: 0.5"
+                  material="color: #0000ff"></a-entity>
+        <a-entity id="right" position="2 -0.6 0.2" 
+                  geometry="primitive: plane; height: 0.3; width: 0.5"
+                  material="color: #0000ff"></a-entity>
+        <a-entity id="minimize" position="2.2 0.88 0.2" 
+                  geometry="primitive: plane; height: 0.2; width: 0.3"
+                  material="color: #ff0000"></a-entity>
+
+
+        <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2">
+          <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
+          <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
+          <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+        </a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
