@@ -10,6 +10,7 @@
     <script src="static_js/aframe-layout-component.min.js"></script>
     <script src="static_js/aframe-template-component.min.js"></script>
     <script src="components/set-image.js"></script>
+    <script src="components/scroll-thumbnail.js"></script>
   </head>
   <body>
     <a-scene>
@@ -25,7 +26,7 @@
 
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
-    	<img id="left" src="images/Left_Button.png">
+        <img id="left" src="images/Left_Button.png">
         <img id="right" src="images/Right_Button.png">
 
         <!-- Image link template to be reused. -->
@@ -49,13 +50,13 @@
       <a-entity id="container" position="0 -1 -4"
         geometry="primitive: plane; height: 2; width: 5"
         material="color: #000000" >
-        <a-entity id="left" class="link" position="-2 -0.6 0.2" 
-                  geometry="primitive: plane; height: 0.3; width: 0.3"
-                  scrollleft="on: click"
-                  material="shader: flat; src: #left"></a-entity>
-        <a-entity id="right" class="link" position="2 -0.6 0.2" 
+        <a-entity id="right" class="link" position="-2 -0.6 0.2" 
                   geometry="primitive: plane; height: 0.3; width: 0.3"
                   scrollright="on: click"
+                  material="shader: flat; src: #left"></a-entity>
+        <a-entity id="left" class="link" position="2 -0.6 0.2" 
+                  geometry="primitive: plane; height: 0.3; width: 0.3"
+                  scrollleft="on: click"
                   material="shader: flat; src: #right"></a-entity>
         <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2">
             <a-entity template="src: #link" data-title="Dinosaur Provincial Park" data-src="#dinosaur" data-thumb="#dinosaur-thumb"></a-entity>
