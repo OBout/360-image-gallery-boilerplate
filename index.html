@@ -10,6 +10,7 @@
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="components/set-image.js"></script>
+    <script src="components/scroll-thumbnail.js"></script>
   </head>
   <body>
     <a-scene>
@@ -42,17 +43,15 @@
       <!-- Image links. -->
       <a-entity id="container" position="0 -1 -4"
         geometry="primitive: plane; height: 2; width: 5"
-        material="color: #444444">
-        <a-entity id="left" position="-2 -0.6 0.2" 
+        material="color: #444444" >
+        <a-entity id="left" class="link" position="-2 -0.6 0.2" 
                   geometry="primitive: plane; height: 0.3; width: 0.5"
-                  material="color: #0000ff"></a-entity>
-        <a-entity id="right" position="2 -0.6 0.2" 
+                  material="color: #0000ff"
+                  scrollleft="on: click"></a-entity>
+        <a-entity id="right" class="link" position="2 -0.6 0.2" 
                   geometry="primitive: plane; height: 0.3; width: 0.5"
-                  material="color: #0000ff"></a-entity>
-        <a-entity id="minimize" position="2.2 0.88 0.2" 
-                  geometry="primitive: plane; height: 0.2; width: 0.3"
-                  material="color: #ff0000"></a-entity>
-
+                  material="color: #0000ff"
+                  scrollright="on: click"></a-entity>
 
         <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2">
           <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
