@@ -22,6 +22,8 @@
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
         <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
         <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+        <img id="left" src="images/Left_Button.png">
+        <img id="right" src="images/Right_Button.png">
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
@@ -43,16 +45,15 @@
       <!-- Image links. -->
       <a-entity id="container" position="0 -1 -4"
         geometry="primitive: plane; height: 2; width: 5"
-        material="color: #444444" >
+        material="color: #000000" >
         <a-entity id="left" class="link" position="-2 -0.6 0.2" 
-                  geometry="primitive: plane; height: 0.3; width: 0.5"
-                  material="color: #0000ff"
-                  scrollleft="on: click"></a-entity>
+                  geometry="primitive: plane; height: 0.3; width: 0.3"
+                  scrollleft="on: click"
+                  material="shader: flat; src: #left"></a-entity>
         <a-entity id="right" class="link" position="2 -0.6 0.2" 
-                  geometry="primitive: plane; height: 0.3; width: 0.5"
-                  material="color: #0000ff"
-                  scrollright="on: click"></a-entity>
-
+                  geometry="primitive: plane; height: 0.3; width: 0.3"
+                  scrollright="on: click"
+                  material="shader: flat; src: #right"></a-entity>
         <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2">
           <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
           <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
