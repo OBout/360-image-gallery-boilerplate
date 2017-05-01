@@ -7,7 +7,6 @@ AFRAME.registerComponent('scrollleft', {
   },
   scroll: function()
   {
-    console.log("This should fire");
     //The current position is what we're modifying
     var links = document.querySelector("#links");
     var layout = links.getAttribute('layout');
