@@ -9,11 +9,14 @@
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <!-- Include WebVR UI -->
+    <script src="static_js/webvr-ui.min.js"></script>
+    <!-- Components -->
     <script src="components/set-image.js"></script>
     <script src="components/scroll-thumbnail.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene webvr-ui>
       <a-assets>
         <img id="bridal-falls" src="images/Bridal_Falls.jpg">
         <img id="bridal-falls-thumb" src="images/Bridal_Falls_Thumb.jpg">
@@ -23,8 +26,18 @@
         <img id="dinosaur-thumb" src="images/Dinosaur_Thumb.jpg">
         <img id="nexen" src="images/Nexen_Beach.jpg">
         <img id="nexen-thumb" src="images/Nexen_Thumb.jpg">
+        <img id="flood-falls" src="images/Flood_Falls.jpg">
+        <img id="flood-falls-thumb" src="images/Flood_Falls_Thumb.jpg">
+        <img id="sundance" src="images/Sundance.jpg">
+        <img id="sundance-thumb" src="images/Sundance_Thumb.jpg">
+        <img id="westvan" src="images/WestVancouver.jpg">
+        <img id="westvan-thumb" src="images/West_Vancouver_Thumb.jpg">
+
+
+
         <img id="porteau" src="images/Porteau_Cove.jpg">
         <img id="porteau-thumb" src="images/Porteau_Thumb.jpg">
+
         <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
         <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
         <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
@@ -69,6 +82,11 @@
           <a-entity template="src: #link" data-src="#bridal-falls" data-thumb="#bridal-falls-thumb"></a-entity>
           <a-entity template="src: #link" data-src="#sol-duc" data-thumb="#sol-duc-thumb"></a-entity>
           <a-entity template="src: #link" data-src="#nexen" data-thumb="#nexen-thumb"></a-entity>
+          <a-entity template="src: #link" data-src="#flood-falls" data-thumb="#flood-falls-thumb"></a-entity>
+          <a-entity template="src: #link" data-src="#sundance" data-thumb="#sundance-thumb"></a-entity>
+          <a-entity template="src: #link" data-src="#westvan" data-thumb="#westvan-thumb"></a-entity>
+
+
         </a-entity>
       </a-entity>
 
