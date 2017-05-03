@@ -38,7 +38,7 @@
             event-set__2="_event: mouseup; scale: 1.2 1.2 1"
             event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
             event-set__4="_event: mouseleave; scale: 1 1 1"
-            set-image="on: click; target: #image-360; src: ${src}"
+            set-image="on: click; target: #image-360; title: #visible_title; value: ${title}; src: ${src}"
             sound="on: click; src: #click-sound"></a-entity>
         </script>
       </a-assets>
@@ -58,12 +58,14 @@
                   geometry="primitive: plane; height: 0.3; width: 0.3"
                   scrollleft="on: click"
                   material="shader: flat; src: #right"></a-entity>
-        <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2">
-            <a-entity template="src: #link" data-title="Dinosaur Provincial Park" data-src="#dinosaur" data-thumb="#dinosaur-thumb"></a-entity>
-            <a-entity template="src: #link" data-title="Bridal Falls" data-src="#bridal-falls" data-thumb="#bridal-falls-thumb"></a-entity>
-            <a-entity template="src: #link" data-title="Nexen Beach" data-src="#nexen" data-thumb="#nexen-thumb"></a-entity>
-            <a-entity template="src: #link" data-title="Sundance, Utah" data-src="#sundance" data-thumb="#sundance-thumb"></a-entity>
-          </a-entity>
+        <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2"
+          animation="property: position; startEvents: scrollpane; from: 0 0.2 0.2; to: 1.5 0.2 0.2; dur: 150">
+          <a-entity template="src: #link" data-title="Dinosaur Provincial Park" data-src="#dinosaur" data-thumb="#dinosaur-thumb"></a-entity>
+          <a-entity template="src: #link" data-title="Bridal Falls" data-src="#bridal-falls" data-thumb="#bridal-falls-thumb"></a-entity>
+          <a-entity template="src: #link" data-title="Nexen Beach" data-src="#nexen" data-thumb="#nexen-thumb"></a-entity>
+          <a-entity template="src: #link" data-title="Sundance, Utah" data-src="#sundance" data-thumb="#sundance-thumb"></a-entity>
+        </a-entity>
+        <a-entity id="visible_title" position="0 -0.6 0.2" scale="4.0 4.0 4.0" text="color: white; align: center; value: This area intentionally blank"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->

@@ -7,6 +7,8 @@
 AFRAME.registerComponent('set-image', {
   schema: {
     on: {type: 'string'},
+    title: {type: 'selector'},
+    value: {type: 'string'},
     target: {type: 'selector'},
     src: {type: 'string'},
     dur: {type: 'number', default: 300}
@@ -25,7 +27,10 @@ AFRAME.registerComponent('set-image', {
       setTimeout(function () {
         // Set image.
         data.target.setAttribute('material', 'src', data.src);
+        // Set text
+        data.title.setAttribute('text','value', data.value);
       }, data.dur);
+      //Set text
     });
   },
 
