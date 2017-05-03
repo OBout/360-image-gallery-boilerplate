@@ -30,6 +30,9 @@
         <img id="sundance-thumb" src="images/Sundance_Thumb.jpg">
 
        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+        <img id="left" src="images/Left_Button.png">
+        <img id="right" src="images/Right_Button.png">
+
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
@@ -52,10 +55,21 @@
       <a-entity id="container" position="0 -1 -4"
         geometry="primitive: plane; height: 2; width: 5"
         material="color: #000000" >
-        <a-entity id="links" layout="type: line; margin: 1.5" position="-1.5 0.2 0.2">
+        <a-entity id="right" class="link" position="-2 -0.6 0.2" 
+                  geometry="primitive: plane; height: 0.3; width: 0.3"
+                  scrollright="on: click"
+                  material="shader: flat; src: #left"></a-entity>
+        <a-entity id="left" class="link" position="2 -0.6 0.2" 
+                  geometry="primitive: plane; height: 0.3; width: 0.3"
+                  scrollleft="on: click"
+                  material="shader: flat; src: #right"></a-entity>
+        <a-entity id="links" layout="type: line; margin: 1.5" position="0 0.2 0.2"
+          animation="property: position; startEvents: scrollpane; from: 0 0.2 0.2; to: 1.5 0.2 0.2; dur: 150">
           <a-entity template="src: #link" data-title="Dinosaur Provincial Park" data-src="#dinosaur" data-thumb="#dinosaur-thumb"></a-entity>
           <a-entity template="src: #link" data-title="Bridal Falls" data-src="#bridal-falls" data-thumb="#bridal-falls-thumb"></a-entity>
           <a-entity template="src: #link" data-title="Nexen Beach" data-src="#nexen" data-thumb="#nexen-thumb"></a-entity>
+          <a-entity template="src: #link" data-title="Sundance, Utah" data-src="#sundance" data-thumb="#sundance-thumb"></a-entity>
+
         </a-entity>
         <a-entity id="visible_title" position="0 -0.6 0.2" scale="4.0 4.0 4.0" text="color: white; align: center; value: This area intentionally blank"></a-entity>
       </a-entity>
