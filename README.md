@@ -2,7 +2,7 @@
 
 Based on the 360 Image Gallery Boilerplate Featured in the *Building an Advanced Scene* guide.
 
-Thanks to Kevin Ngo and Mozilla for making AFrame and this awesome example
+Thanks to Kevin Ngo[@ngokevin](https://github.com/ngokevin) and Mozilla VR [@mozvr](https://github.com/mozvr) for making AFrame and this awesome example
 
 ## Dependencies
 
