@@ -1,8 +1,8 @@
-# 360-image-gallery-boilerplate
+# PhoneGap Day 2017: Basic A-Frame Workshop
 
-> Featured in the *Building an Advanced Scene* guide.
+Based on the 360 Image Gallery Boilerplate Featured in the *Building an Advanced Scene* guide.
 
-Scene for selecting between different 360-degree images.
+Thanks to Kevin Ngo and Mozilla for making AFrame and this awesome example
 
 ## Dependencies
 
