@@ -14,13 +14,16 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-        <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-        <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+        <img id="bridal-falls" src="images/Bridal_Falls.jpg">
+        <img id="bridal-falls-thumb" src="images/Bridal_Falls_Thumb.jpg">
+        <img id="dinosaur" src="images/Dinosaur.jpg">
+        <img id="dinosaur-thumb" src="images/Dinosaur_Thumb.jpg">
+        <img id="nexen" src="images/Nexen_Beach.jpg">
+        <img id="nexen-thumb" src="images/Nexen_Thumb.jpg">
+        <img id="sundance" src="images/Sundance.jpg">
+        <img id="sundance-thumb" src="images/Sundance_Thumb.jpg">
+
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
@@ -37,13 +40,14 @@
       </a-assets>
 
       <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#city"></a-sky>
+      <a-sky id="image-360" radius="10" src="#bridal-falls"></a-sky>
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+        <a-entity template="src: #link" data-title="Dinosaur Provincial Park" data-src="#dinosaur" data-thumb="#dinosaur-thumb"></a-entity>
+        <a-entity template="src: #link" data-title="Bridal Falls" data-src="#bridal-falls" data-thumb="#bridal-falls-thumb"></a-entity>
+        <a-entity template="src: #link" data-title="Nexen Beach" data-src="#nexen" data-thumb="#nexen-thumb"></a-entity>
+        <a-entity template="src: #link" data-title="Sundance, Utah" data-src="#sundance" data-thumb="#sundance-thumb"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
